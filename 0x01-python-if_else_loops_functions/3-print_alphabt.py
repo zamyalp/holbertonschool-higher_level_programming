@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-
-
-def print_low_alpha():
-                for c in 'abcdfghijklmnoprstuvwxyz':
-                                    print('{}'.format(c), end='')
-
-                                    if __name__ == '__main__':
-                                                    print_low_alpha()
+i = 0
+while i < 26:
+                    print("{:s}".format(chr(i + ord('a'))), end="")
+                        i += 1
