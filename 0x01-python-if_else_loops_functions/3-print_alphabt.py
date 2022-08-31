@@ -1,4 +1,9 @@
 #!/usr/bin/python3
-for a in range(97, 123):
-            print('{:c}'.format(a), end='')
-            
+
+
+def print_low_alpha():
+                for c in 'abcdfghijklmnoprstuvwxyz':
+                                    print('{}'.format(c), end='')
+
+                                    if __name__ == '__main__':
+                                                    print_low_alpha()
