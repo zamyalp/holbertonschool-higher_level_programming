@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-def print_low_alpha():
-   for c in 'abcdfghijklmnoprstuvwxyz':
-        print('{}'.format(c), end='')
+for number in range(97, 123):
+    if number not in(113, 101):
+        print('{:c}'.format(number), end='')
