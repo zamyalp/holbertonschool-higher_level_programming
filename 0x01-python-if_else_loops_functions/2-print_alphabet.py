@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 98
-print('{:d} Battery street'.format(number))
+for number in range(97,123):
+    print('{:c}'.format(number), end='')
