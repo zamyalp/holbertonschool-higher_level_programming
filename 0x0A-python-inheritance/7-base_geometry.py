@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Module 7-base_geometry.
-Creates a BaseGeometry class.
+"""Module 7-base_geometry
+Public instances for class BaseGeometry
 """
 
 
