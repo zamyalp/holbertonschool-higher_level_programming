@@ -17,7 +17,7 @@ class BaseGeometry():
 
 
 class Rectangle(BaseGeometry):
-            """ Rectangle class that extends BaseGeometry """
+    """ Rectangle class that extends BaseGeometry """
     def __init__(self, width, height):
         """ initializer for Rectangle class """
         self.integer_validator("width", width)
@@ -33,7 +33,7 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
-                """ Square class that extends Rectangle """
+    """ Square class that extends Rectangle """
     def __init__(self, size):
         self.integer_validator("size", size)
         self.__size = size
