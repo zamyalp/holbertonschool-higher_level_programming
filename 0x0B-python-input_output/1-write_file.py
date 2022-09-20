@@ -4,6 +4,6 @@
 
 
 def write_file(filename="", text=""):
-    """Counts lines in filename"""
+    """Will write to a text file and return the number of characters"""
     with open(filename, 'w', encoding="UTF8") as f:
         return f.write(text)
