@@ -12,7 +12,7 @@ class Student:
 
                                                     def to_json(self):
                                                         """
-        Retrieves a dictionary representation of
-        a Student instance
-                                                        """
+       Retrieves a dictionary representation of
+       a Student instance.
+       """
         return vars(self)
