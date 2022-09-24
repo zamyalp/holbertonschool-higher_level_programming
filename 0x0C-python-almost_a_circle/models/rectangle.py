@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Writing a class that inherits from Base.
+    class that inherits base.
 """
 
 
@@ -8,7 +8,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """class that attributes rectangles"""
+    """Inherited class that attributes to rectangles"""
 
     @property
     def width(self):
@@ -66,70 +66,70 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-        def __init__(self, width, height, x=0, y=0, id=None):
-            """class constructor and initiation"""
-            super().__init__(id)
-            self.width = width
-            self.height = height
-            self.x = x
-            self.y = y
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """class constructor and initiation"""
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
-        def area(self):
-            """returns area value of the Rectangle instance"""
-            return self.__width * self.__height
+    def area(self):
+        """returns the area value of the Rectangle instance"""
+        return self.__width * self.__height
 
-        def display(self):
-            """prints the Rectangle instance with #"""
-            for y_axis in range(0, self.__y):
-                print()
-            for column in range(0, self.__height):
-                string = ''
-                for x_axis in range(0, self.__x):
-                    string = string + ' '
-                for row in range(0, self.__width):
-                    string = string + '#'
-                print(string)
+    def display(self):
+        """prints the Rectangle instance with #"""
+        for y_axis in range(0, self.__y):
+            print()
+        for column in range(0, self.__height):
+            string = ''
+            for x_axis in range(0, self.__x):
+                string = string + ' '
+            for row in range(0, self.__width):
+                string = string + '#'
+            print(string)
 
-        def __str__(self):
-            """Using str method to return a message"""
-            message = "[Rectangle] ({}) ".format(self.id, end='')
-            message2 = "{}/{} ".format(self.x, self.y, end='')
-            message3 = "- {}/{}".format(self.width, self.height)
-            return message + message2 + message3
+    def __str__(self):
+        """Using str method to return a message"""
+        message = "[Rectangle] ({}) ".format(self.id, end='')
+        message2 = "{}/{} ".format(self.x, self.y, end='')
+        message3 = "- {}/{}".format(self.width, self.height)
+        return message + message2 + message3
 
-        def update(self, *args, **kwargs):
-            """Assigns an argument to attribute"""
-            if args is not None and len(args) > 0:
-                count = 0
-                for arg in args:
-                    if count == 0:
-                        self.id = arg
-                    if count == 1:
-                        self.width = arg
-                    if count == 2:
-                        self.height = arg
-                    if count == 3:
-                        self.x = arg
-                    if count == 4:
-                        self.y = arg
-                    count = count + 1
-            else:
-                for key, value in kwargs.items():
-                    if key == 'id':
-                        self.id = value
-                    if key == 'width':
-                        self.width = value
-                    if key == 'height':
-                        self.height = value
-                    if key == 'x':
-                        self.x = value
-                    if key == 'y':
-                        self.y = value
+    def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute"""
+        if args is not None and len(args) > 0:
+            count = 0
+            for arg in args:
+                if count == 0:
+                    self.id = arg
+                if count == 1:
+                    self.width = arg
+                if count == 2:
+                    self.height = arg
+                if count == 3:
+                    self.x = arg
+                if count == 4:
+                    self.y = arg
+                count = count + 1
+        else:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                if key == 'width':
+                    self.width = value
+                if key == 'height':
+                    self.height = value
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
 
-        def to_dictionary(self):
-            """dictionary representation"""
-            return {'id': self.id,
-                    'width': self.width,
-                    'height': self.height,
-                    'x': self.x,
-                    'y': self.y}
+    def to_dictionary(self):
+        """Using dictionary representation"""
+        return {'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y}
