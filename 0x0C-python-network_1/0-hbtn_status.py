@@ -8,6 +8,6 @@ url = 'https://intranet.hbtn.io/status'
 with request.urlopen(url) as response:
     response = response.read()
     print('Body response:')
-    print('\t- type: {}'.format(type(the_page)))
-    print('\t- content: {}'.format(the_page))
-    print('\t- utf8 content: {}'.format(the_page.decode('utf-8')))
+    print('\t- type: {}'.format(type(response)))
+    print('\t- content: {}'.format(response))
+    print('\t- utf8 content: {}'.format(response.decode('utf-8')))
