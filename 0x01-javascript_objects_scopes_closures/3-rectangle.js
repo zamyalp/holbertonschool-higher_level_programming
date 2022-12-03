@@ -8,13 +8,6 @@ module.exports = class Rectangle {
   }
 
   print () {
-    let stringSquare = '';
-    for (let column = 1; column <= this.height; column++) {
-      for (let row = 1; row <= this.width; row++) {
-	stringSquare += 'X';
-      }
-      stringSquare += '\n';
-    }
-    process.stdout.write(stringSquare);
+    for (let i = 0; i < this.height; i++) console.log('X'.repeat(this.width));
   }
 };
