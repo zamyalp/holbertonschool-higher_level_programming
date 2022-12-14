@@ -9,9 +9,9 @@ request(url, function (error, response, text) {
     console.log(error);
   } else {
     system.writeFile(fileName, text, 'utf8', function (err) {
-     if (err) {
-       console.log(err);
-     }
+      if (err) {
+        console.log(err);
+      }
     });
   }
 });
